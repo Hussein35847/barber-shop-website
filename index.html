@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aga Men's Barber | Luxury Men's Grooming</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+/* Light Theme Variables */
+:root {
+    --bg: #0a0a0a;
+    --text: #e0e0e0;
+    --gold: #d4af37;
+    --light-gold: #f0e6d2;
+    --dark-gold: #b8860b;
+    --card-bg: #111;
+    --border: #333;
+    --dot-line: #555;
+    --header-bg: rgba(10, 10, 10, 0.95);
+    --footer-bg: #000;
+}
+/* Light Theme Override */
+.light-theme {
+    --bg: #f5f5f5;
+    --text: #333;
+    --gold: #b8860b;
+    --light-gold: #8b6519;
+    --dark-gold: #8b6519;
+    --card-bg: #fff;
+    --border: #ddd;
+    --dot-line: #ccc;
+    --header-bg: rgba(245, 245, 245, 0.98);
+    --footer-bg: #e9e9e9;
+}
+
+        /* Light Theme Override */
+        .light-theme {
+            --bg: #f5f5f5;
+            --text: #333;
+            --gold: #b8860b;
+            --light-gold: #8b6519;
+            --dark-gold: #8b6519;
+            --card-bg: #fff;
+            --border: #ddd;
+            --dot-line: #ccc;
+            --header-bg: rgba(245, 245, 245, 0.98);
+            --footer-bg: #e9e9e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', 'Helvetica', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--light-gold);
+            font-weight: 700;
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+        }
+
+        h1 {
+            font-size: 3.8rem;
+            line-height: 1.2;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            bottom: -10px;
+            left: 0;
+        }
+
+        p {
+            color: var(--text);
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #000;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn:hover {
+            background: var(--light-gold);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            transition: 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--light-gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        /* Theme and Language Switchers */
+        .theme-switcher {
+            background: transparent;
+            border: none;
+            color: var(--text);
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .theme-switcher:hover {
+            color: var(--gold);
+        }
+
+        .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .language-btn i {
+            margin-left: 5px;
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 0;
+            margin-top: 5px;
+            min-width: 120px;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .language-dropdown.show {
+            display: block;
+        }
+
+        .language-option {
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-option:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1590698016881-774517254c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') 
+                center center / cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            color: var(--light-gold);
+            margin: 25px 0 35px;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Services Section */
+        #services {
+            background-color: var(--bg);
+            background-image: 
+                radial-gradient(circle at 10px 10px, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 10px 10px, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 10px 10px, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px, 10px 0;
+            background-repeat: repeat;
+        }
+
+        .services-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+
+        .services-container::before,
+        .services-container::after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: var(--gold);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .services-container::before {
+            top: 20px;
+            left: 20px;
+        }
+
+        .services-container::after {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .menu-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--gold);
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .menu-title span {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--text);
+            margin-top: 5px;
+            display: block;
+            font-family: 'Lato', sans-serif;
+            opacity: 0.8;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px dotted var(--dot-line);
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item strong {
+            color: var(--light-gold);
+            font-weight: 600;
+        }
+
+        .menu-item .price {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .menu-category {
+            display: block;
+            margin: 20px 0 10px;
+            color: var(--gold);
+            font-weight: 600;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--bg);
+            position: relative;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2:after {
+            left: 0;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 28px;
+        }
+
+        .info-item i {
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-right: 18px;
+            min-width: 32px;
+        }
+
+        .info-text h3 {
+            color: var(--light-gold);
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 35px;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--gold);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            color: #000;
+            transform: translateY(-4px);
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 22px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+
+        .contact-form textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--text);
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border);
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--light-gold);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            color: var(--text);
+            margin-bottom: 12px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            padding-top: 25px;
+            text-align: center;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--light-gold);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid var(--gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: var(--card-bg);
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                padding: 20px 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+                text-align: center;
+                margin-left: 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 90%;
+                text-align: center;
+            }
+            
+            .services-container {
+                padding: 30px 20px;
+            }
+            
+            .language-dropdown {
+                left: 0;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#hero" class="logo">Aga <span>Men's Barber</span></a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero" data-i18n="home">Home</a></li>
+                    <li><a href="#services" data-i18n="menu">Menu</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                    <li class="language-selector">
+                        <button class="language-btn" id="languageBtn">
+                            <span data-i18n="language">Language</span> <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <div class="language-option" data-lang="en">English</div>
+                            <div class="language-option" data-lang="tr">Türkçe</div>
+                            <div class="language-option" data-lang="ar">العربية</div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="theme-switcher" id="themeSwitcher">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+                <div class="mobile-menu" id="mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-i18n="heroTitle">Where Elegance Meets Precision</h1>
+                <p data-i18n="heroSubtitle">Step into Istanbul's most exclusive men's grooming destination. Experience luxury, tradition, and style in every cut.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn" data-i18n="viewMenu">View Menu</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="bookAppointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="services-container">
+                <h2 class="menu-title" data-i18n="barberName">Aga Men's Barber</h2>
+                <p class="menu-title"><span data-i18n="since">Luxury Grooming Since 2010</span></p>
+
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <strong data-i18n="haircutBeard">Haircut & Beard</strong>
+                        <span class="price">500₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong data-i18n="childrenHaircut">Children's Haircut</strong>
+                        <span class="price">250₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong data-i18n="haircutDye">Haircut with Dye</strong>
+                        <span class="price">650₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong data-i18n="beardDye">Beard with Dye</strong>
+                        <span class="price">350₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong data-i18n="outline">Outline</strong>
+                        <span class="price">200₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong data-i18n="beardTrim">Beard Trim</strong>
+                        <span class="price">200₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong data-i18n="beardWax">Beard Wax & Threading</strong>
+                        <span class="price">250₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong data-i18n="haircutFacial">Haircut with Facial Cleansing</strong>
+                        <span class="price">700₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong data-i18n="facialCleansing">Facial Cleansing</strong>
+                        <span class="price">300₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong>Keratin Treatment</strong>
+                        <span class="price">Starting from 1000₺</span>
+                    </li>
+                    <li class="menu-item">
+                        <strong>Protein Treatment</strong>
+                        <span class="price">Starting from 1500₺</span>
+                    </li>
+                    <li class="menu-item" style="color: var(--gold); font-weight: 600;">
+                        <strong data-i18n="groomHaircut">Groom's Full Haircut (Wedding/Event)</strong>
+                        <span class="price">1500₺</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2 data-i18n="contactUs">Contact Us</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-text">
+                            <h3 data-i18n="location">Location</h3>
+                            <p>Ahmet Kaya Cd. No:4/A, 34315 Avcılar/İstanbul</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-text">
+                            <h3 data-i18n="phone">Phone</h3>
+                            <p>0536 699 1693</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-text">
+                            <h3 data-i18n="email">Email</h3>
+                            <p>odaaikalid@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100076183362847" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/abu_j_barbar/" target="_blank" rel="noopener noreferrer" class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/905366991693" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xrblvwzy" method="POST" id="bookingForm">
+                        <div class="success-message" id="successMessage" data-i18n="successMessage">
+                            Thank you! Your booking request has been sent. We'll confirm shortly.
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" data-i18n="namePlaceholder" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address" data-i18n="emailPlaceholder" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" data-i18n="phonePlaceholder" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="datetime-local" name="datetime" required />
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="" disabled selected data-i18n="selectService">Select Service</option>
+                                <option value="Haircut & Beard - 500₺" data-i18n="haircutBeardOption">Haircut & Beard - 500₺</option>
+                                <option value="Children's Haircut - 250₺" data-i18n="childrenHaircutOption">Children's Haircut - 250₺</option>
+                                <option value="Haircut with Dye - 650₺" data-i18n="haircutDyeOption">Haircut with Dye - 650₺</option>
+                                <option value="Beard with Dye - 350₺" data-i18n="beardDyeOption">Beard with Dye - 350₺</option>
+                                <option value="Facial Cleansing - 300₺" data-i18n="facialCleansingOption">Facial Cleansing - 300₺</option>
+                                <option value="Haircut with Facial - 700₺" data-i18n="haircutFacialOption">Haircut with Facial - 700₺</option>
+                                <option value="Groom's Haircut - 1500₺" data-i18n="groomHaircutOption">Groom's Haircut - 1500₺</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn" data-i18n="confirmBooking">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-i18n="barberName">Aga Men's Barber</h3>
+                    <p data-i18n="footerDescription">Istanbul's finest luxury men's grooming experience since 2010. Where tradition meets elegance.</p>
+                </div>
+                <div class="footer-column">
+                    <h3 data-i18n="quickLinks">Quick Links</h3>
+                    <a href="#hero" data-i18n="home">Home</a>
+                    <a href="#services" data-i18n="menu">Menu</a>
+                    <a href="#contact" data-i18n="contact">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h3 data-i18n="contact">Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Ahmet Kaya Cd. No:4/A, 34315 Avcılar/İstanbul</p>
+                    <p><i class="fas fa-phone"></i> 0536 699 1693</p>
+                    <p><i class="fas fa-envelope"></i> odaaikalid@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Aga Men's Barber. <span data-i18n="crafted">Crafted with precision.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                // Navigation
+                "home": "Home",
+                "menu": "Menu",
+                "contact": "Contact",
+                "language": "Language",
+                
+                // Hero section
+                "heroTitle": "Where Elegance Meets Precision",
+                "heroSubtitle": "Step into Istanbul's most exclusive men's grooming destination. Experience luxury, tradition, and style in every cut.",
+                "viewMenu": "View Menu",
+                "bookAppointment": "Book Appointment",
+                
+                // Services
+                "barberName": "Aga Men's Barber",
+                "since": "Luxury Grooming Since 2010",
+                "haircutBeard": "Haircut & Beard",
+                "childrenHaircut": "Children's Haircut",
+                "haircutDye": "Haircut with Dye",
+                "beardDye": "Beard with Dye",
+                "outline": "Outline",
+                "beardTrim": "Beard Trim",
+                "beardWax": "Beard Wax & Threading",
+                "haircutFacial": "Haircut with Facial Cleansing",
+                "facialCleansing": "Facial Cleansing",
+                "keratin": "Keratin Treatment",
+                "protein": "Protein Treatment",
+                "groomHaircut": "Groom's Full Haircut (Wedding/Event)",
+                "startingFrom": "Starting from",
+                
+                // Contact
+                "contactUs": "Contact Us",
+                "location": "Location",
+                "phone": "Phone",
+                "email": "Email",
+                "successMessage": "Thank you! Your booking request has been sent. We'll confirm shortly.",
+                "namePlaceholder": "Your Name",
+                "emailPlaceholder": "Email Address",
+                "phonePlaceholder": "Phone Number",
+                "selectService": "Select Service",
+                "haircutBeardOption": "Haircut & Beard - 500₺",
+                "childrenHaircutOption": "Children's Haircut - 250₺",
+                "haircutDyeOption": "Haircut with Dye - 650₺",
+                "beardDyeOption": "Beard with Dye - 350₺",
+                "facialCleansingOption": "Facial Cleansing - 300₺",
+                "haircutFacialOption": "Haircut with Facial - 700₺",
+                "groomHaircutOption": "Groom's Haircut - 1500₺",
+                "confirmBooking": "Confirm Booking",
+                
+                // Footer
+                "quickLinks": "Quick Links",
+                "footerDescription": "Istanbul's finest luxury men's grooming experience since 2010. Where tradition meets elegance.",
+                "crafted": "Crafted with precision."
+            },
+            tr: {
+                // Navigation
+                "home": "Ana Sayfa",
+                "menu": "Menü",
+                "contact": "İletişim",
+                "language": "Dil",
+                
+                // Hero section
+                "heroTitle": "Zarafetin Kesinlikle Buluştuğu Yer",
+                "heroSubtitle": "İstanbul'un en özel erkek bakım merkezine adım atın. Lüksü, geleneği ve stili her kesimde deneyimleyin.",
+                "viewMenu": "Menüyü Görüntüle",
+                "bookAppointment": "Randevu Al",
+                
+                // Services
+                "barberName": "Aga Erkek Berberi",
+                "since": "2010'dan Beri Lüks Erkek Bakımı",
+                "haircutBeard": "Saç & Sakal Kesimi",
+                "childrenHaircut": "Çocuk Saç Kesimi",
+                "haircutDye": "Boyalı Saç Kesimi",
+                "beardDye": "Boyalı Sakal",
+                "outline": "Outline",
+                "beardTrim": "Sakal Düzeltme",
+                "beardWax": "Sakal Mumlama & İplik",
+                "haircutFacial": "Saç Kesimi ve Yüz Bakımı",
+                "facialCleansing": "Yüz Temizleme",
+                "keratin": "Keratin Tedavisi",
+                "protein": "Protein Tedavisi",
+                "groomHaircut": "Damat Saç Kesimi (Düğün/Özel Etkinlik)",
+                "startingFrom": "Başlangıç fiyatı",
+                
+                // Contact
+                "contactUs": "İletişim",
+                "location": "Konum",
+                "phone": "Telefon",
+                "email": "E-posta",
+                "successMessage": "Teşekkürler! Randevu talebiniz gönderildi. En kısa sürede onaylayacağız.",
+                "namePlaceholder": "Adınız",
+                "emailPlaceholder": "E-posta Adresiniz",
+                "phonePlaceholder": "Telefon Numaranız",
+                "selectService": "Hizmet Seçin",
+                "haircutBeardOption": "Saç & Sakal Kesimi - 500₺",
+                "childrenHaircutOption": "Çocuk Saç Kesimi - 250₺",
+                "haircutDyeOption": "Boyalı Saç Kesimi - 650₺",
+                "beardDyeOption": "Boyalı Sakal - 350₺",
+                "facialCleansingOption": "Yüz Temizleme - 300₺",
+                "haircutFacialOption": "Saç Kesimi ve Yüz Bakımı - 700₺",
+                "groomHaircutOption": "Damat Saç Kesimi - 1500₺",
+                "confirmBooking": "Randevuyu Onayla",
+                
+                // Footer
+                "quickLinks": "Hızlı Bağlantılar",
+                "footerDescription": "2010'dan beri İstanbul'un en iyi lüks erkek bakım deneyimi. Geleneğin zarafetle buluştuğu yer.",
+                "crafted": "Özenle hazırlanmıştır."
+            },
+            ar: {
+                // Navigation
+                "home": "الرئيسية",
+                "menu": "قائمة الخدمات",
+                "contact": "اتصل بنا",
+                "language": "اللغة",
+                
+                // Hero section
+                "heroTitle": "حيث يلتقي الأناقة والدقة",
+                "heroSubtitle": "خطو إلى وجهة العناية بالرجال الأكثر حصرية في اسطنبول. جرب الفخامة والتقاليد والأناقة في كل قصة.",
+                "viewMenu": "عرض القائمة",
+                "bookAppointment": "احجز موعد",
+                
+                // Services
+                "barberName": "آغا حلاقة الرجال",
+                "since": "العناية الفاخرة بالرجال منذ 2010",
+                "haircutBeard": "قص الشعر واللحية",
+                "childrenHaircut": "قص شعر الأطفال",
+                "haircutDye": "قص الشعر مع الصبغة",
+                "beardDye": "لحية مع الصبغة",
+                "outline": "التفصيل",
+                "beardTrim": "تهذيب اللحية",
+                "beardWax": "شمع اللحية والخيط",
+                "haircutFacial": "قص الشعر مع تنظيف الوجه",
+                "facialCleansing": "تنظيف الوجه",
+                "keratin": " الكيراتين",
+                "protein": " البروتين",
+                "groomHaircut": "قص شعر العريس (الزفاف/المناسبات)",
+                "startingFrom": "تبدأ الأسعار من",
+                
+                // Contact
+                "contactUs": "اتصل بنا",
+                "location": "الموقع",
+                "phone": "الهاتف",
+                "email": "البريد الإلكتروني",
+                "successMessage": "شكراً لك! تم إرسال طلب الحجز الخاص بك. سنؤكد قريباً.",
+                "namePlaceholder": "اسمك",
+                "emailPlaceholder": "عنوان البريد الإلكتروني",
+                "phonePlaceholder": "رقم الهاتف",
+                "selectService": "اختر الخدمة",
+                "haircutBeardOption": "قص الشعر واللحية - 500₺",
+                "childrenHaircutOption": "قص شعر الأطفال - 250₺",
+                "haircutDyeOption": "قص الشعر مع الصبغة - 650₺",
+                "beardDyeOption": "لحية مع الصبغة - 350₺",
+                "facialCleansingOption": "تنظيف الوجه - 300₺",
+                "haircutFacialOption": "قص الشعر مع تنظيف الوجه - 700₺",
+                "groomHaircutOption": "قص شعر العريس - 1500₺",
+                "confirmBooking": "تأكيد الحجز",
+                
+                // Footer
+                "quickLinks": "روابط سريعة",
+                "footerDescription": "أفضل تجربة عناية فاخرة بالرجال في اسطنبول منذ عام 2010. حيث يلتقي التقليد بالأناقة.",
+                "crafted": "مصمم بدقة."
+            }
+        };
+
+        // Set initial language
+        let currentLang = 'en';
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language based on browser preference or default to English
+            const browserLang = navigator.language.split('-')[0];
+            if (translations[browserLang]) {
+                currentLang = browserLang;
+            }
+            updateContent();
+            
+            // Check for saved theme preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+                document.getElementById('themeSwitcher').innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+
+        // Update content based on current language
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
+                        element.setAttribute('placeholder', translations[currentLang][key]);
+                    } else if (element.tagName === 'OPTION') {
+                        element.textContent = translations[currentLang][key];
+                    } else {
+                        element.textContent = translations[currentLang][key];
+                    }
+                }
+            });
+            
+            // Update language button text
+            document.querySelector('.language-btn span').textContent = translations[currentLang]['language'];
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = currentLang;
+            
+            // Update text direction for Arabic
+            if (currentLang === 'ar') {
+                document.body.style.direction = 'rtl';
+                document.querySelectorAll('h2:after').forEach(el => {
+                    el.style.left = 'auto';
+                    el.style.right = '0';
+                });
+            } else {
+                document.body.style.direction = 'ltr';
+                document.querySelectorAll('h2:after').forEach(el => {
+                    el.style.left = '0';
+                    el.style.right = 'auto';
+                });
+            }
+            
+            // Save language preference
+            localStorage.setItem('language', currentLang);
+        }
+
+        // Language selector functionality
+        document.getElementById('languageBtn').addEventListener('click', function() {
+            document.getElementById('languageDropdown').classList.toggle('show');
+        });
+
+        document.querySelectorAll('.language-option').forEach(option => {
+            option.addEventListener('click', function() {
+                currentLang = this.getAttribute('data-lang');
+                updateContent();
+                document.getElementById('languageDropdown').classList.remove('show');
+            });
+        });
+
+        // Close language dropdown when clicking outside
+        window.addEventListener('click', function(e) {
+            if (!e.target.matches('.language-btn') && !e.target.closest('.language-selector')) {
+                document.getElementById('languageDropdown').classList.remove('show');
+            }
+        });
+
+        // Theme switcher functionality
+        document.getElementById('themeSwitcher').addEventListener('click', function() {
+            document.body.classList.toggle('light-theme');
+            if (document.body.classList.contains('light-theme')) {
+                this.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('theme', 'light');
+            } else {
+                this.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+            this.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+
+        // Form Submission
+        const form = document.getElementById('bookingForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            successMessage.style.display = 'block';
+            form.reset();
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = document.body.classList.contains('light-theme') ? 
+                    'rgba(245, 245, 245, 0.98)' : 'rgba(10, 10, 10, 0.98)';
+            } else {
+                header.style.background = document.body.classList.contains('light-theme') ? 
+                    'rgba(245, 245, 245, 0.95)' : 'rgba(10, 10, 10, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
